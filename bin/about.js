@@ -2,4 +2,7 @@
 
 'use strict'
 
-console.log('Ariel Pchara <ariel@pxra.me>')
+const { readFileSync } = require('fs')
+const {resolve} = require('path')
+
+console.log(readFileSync(resolve(__dirname, '../card')).toString())

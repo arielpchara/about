@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/arielpchara/about/issues"
   },
-  "homepage": "https://github.com/arielpchara/about#readme"
+  "homepage": "https://github.com/arielpchara/about#readme",
+  "devDependencies": {
+    "boxen": "^4.1.0",
+    "chalk": "^3.0.0"
+  }
 }
