@@ -1,5 +1,5 @@
 const boxen = require('boxen')
-const { green } = require('chalk')
+const { green, red } = require('chalk')
 const {writeFileSync } = require('fs')
 
 const WIDTH = 50
@@ -10,11 +10,17 @@ const data = [
   ['Github', 'https://github.com/arielpchara']
 ]
 
-const boxConfig =  {padding: 1, margin: 1, borderStyle: 'classic', borderColor: 'green'}
+const boxConfig =  {padding: 1, borderStyle: 'classic', borderColor: 'green'}
 
 function toLineString(line) {
   const space = line.reduce( (num, v) => num - v.length, WIDTH )
   return green([ line[0], ...Array(space).fill('.'), line[1] ].join(''))
 }
+const infoBox = boxen(data.map(toLineString).join('\n'), boxConfig)
+const dangerBox = red('\nTHIS IS DANGER! - Never do it again!')
+const card = `
+${infoBox}
+${dangerBox}
+`
 
-writeFileSync('./card',boxen(data.map(toLineString).join('\n'), boxConfig))
+writeFileSync('./card', card)
