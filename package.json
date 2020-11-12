@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node create.js"
   },
   "bin": {
@@ -22,7 +21,7 @@
   },
   "homepage": "https://github.com/arielpchara/about#readme",
   "devDependencies": {
-    "boxen": "^4.1.0",
-    "chalk": "^3.0.0"
+    "boxen": "^6.2.1",
+    "chalk": "^5.0.0"
   }
 }
