@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh 'npm install'
                 sh 'npm run build'
-                echo 'cat about'
+                sh 'cat about'
             }
         }
     }
