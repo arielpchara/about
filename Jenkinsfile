@@ -3,9 +3,9 @@ pipeline {
         docker { image 'node:16.13-alpine' }
     }
     stages {
-        stage('Hello') {
+        stage('Build') {
             steps {
-                echo 'Hello'
+                sh 'npm install'
                 sh 'npm run build'
                 echo 'cat about'
             }
