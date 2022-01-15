@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node create.js"
+    "build": "node create.mjs"
   },
   "bin": {
     "about": "./bin/about.js"

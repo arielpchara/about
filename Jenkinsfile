@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Hello') {
             echo 'Hello'
-            sh 'npm build'
+            sh 'npm run build'
             echo 'cat about'
         }
     }
